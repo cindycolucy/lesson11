@@ -1,9 +1,24 @@
+import java.util.LinkedList;
+import java.util.List;
+import java.util.ListIterator;
 
 public class TestLinkedList {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		List passengerList = new LinkedList();
 
+		passengerList.add("Alex Smith");
+		passengerList.add("Mary Lou");
+		passengerList.add("Sim Monk");
+
+		ListIterator iterator = passengerList.listIterator();
+
+		System.out.println(iterator.next());
+		passengerList.add("VIP Customer");
+		iterator.previous();
+		System.out.println(iterator.next());
+		System.out.println(iterator.next());
+		System.out.println(iterator.next());
 	}
 
 }
